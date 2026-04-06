@@ -8,3 +8,11 @@ function divide(a, b) {
   return a / b;
 }
 console.log("20 / 4 =", divide(20, 4));
+// Fix: Add input validation
+function safeAdd(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error("Inputs must be numbers!");
+  }
+  return a + b;
+}
+console.log("safeAdd:", safeAdd(3, 4));
